@@ -3,7 +3,7 @@
 
 Name:           rar
 Summary:        Program to create and manage RAR archives
-Version:        5.3.0
+Version:        5.4.0
 Release:        1%{?dist}
 License:        Proprietary
 Group:          Applications/Archiving
@@ -55,6 +55,9 @@ rm -rf %{buildroot}
 %{_libdir}/default.sfx
 
 %changelog
+* Wed Aug 17 2016 Simone Caronni <negativo17@gmail.com> - 5.4.0-1
+- Update to 5.4.0.
+
 * Mon Dec 21 2015 Simone Caronni <negativo17@gmail.com> - 5.3.0-1
 - Update to 5.3.0.
 - Add license macro.
