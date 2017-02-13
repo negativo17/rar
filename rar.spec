@@ -4,14 +4,12 @@
 Name:           rar
 Summary:        Program to create and manage RAR archives
 Version:        5.4.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        Proprietary
-Group:          Applications/Archiving
 URL:            http://www.rarlabs.com/
 
 Source0:        http://rarlab.com/rar/rarlinux-%{version}.tar.gz
 Source1:        http://rarlab.com/rar/rarlinux-x64-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 ExclusiveArch:  %{ix86} x86_64
 
 Obsoletes:      unrar < %{?epoch}:%{version}-%{release}
@@ -35,18 +33,12 @@ Console RAR supports archives only in RAR format, which names usually have a
 # Nothing to build
 
 %install
-rm -rf %{buildroot}
 install -D -p -m0755 rar %{buildroot}%{_bindir}/rar
 install -D -p -m0755 unrar %{buildroot}%{_bindir}/unrar
 install -D -p -m0644 rarfiles.lst %{buildroot}%{_sysconfdir}/rarfiles.lst
 install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-, root, root, 0755)
-%{!?_licensedir:%global license %%doc}
 %license license.txt
 %doc acknow.txt order.htm rar.txt readme.txt whatsnew.txt
 %config(noreplace) %{_sysconfdir}/rarfiles.lst
@@ -55,6 +47,9 @@ rm -rf %{buildroot}
 %{_libdir}/default.sfx
 
 %changelog
+* Mon Feb 13 2017 Simone Caronni <negativo17@gmail.com> - 5.4.0-2
+- Remove RHEL/CentOS 5 support.
+
 * Wed Aug 17 2016 Simone Caronni <negativo17@gmail.com> - 5.4.0-1
 - Update to 5.4.0.
 
