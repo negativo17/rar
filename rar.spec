@@ -3,8 +3,8 @@
 
 Name:           rar
 Summary:        Program to create and manage RAR archives
-Version:        5.4.0
-Release:        2%{?dist}
+Version:        5.5.0
+Release:        1%{?dist}
 License:        Proprietary
 URL:            http://www.rarlabs.com/
 
@@ -22,11 +22,11 @@ Console RAR supports archives only in RAR format, which names usually have a
 
 %prep
 %ifarch %{ix86}
-%setup -qn %{name}
+%setup -q -n %{name}
 %endif
 
 %ifarch x86_64
-%setup -T -b 1 -n %{name}
+%setup -q -T -b 1 -n %{name}
 %endif
 
 %build
@@ -47,6 +47,9 @@ install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 %{_libdir}/default.sfx
 
 %changelog
+* Tue Sep 19 2017 Simone Caronni <negativo17@gmail.com> - 5.5.0-1
+- Update to 5.5.0.
+
 * Mon Feb 13 2017 Simone Caronni <negativo17@gmail.com> - 5.4.0-2
 - Remove RHEL/CentOS 5 support.
 
