@@ -3,7 +3,7 @@
 
 Name:           rar
 Summary:        Program to create and manage RAR archives
-Version:        5.6.1
+Version:        5.7.1
 Release:        1%{?dist}
 License:        Proprietary
 URL:            http://www.rarlabs.com/
@@ -47,6 +47,9 @@ install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 %{_libdir}/default.sfx
 
 %changelog
+* Tue May 14 2019 Simone Caronni <negativo17@gmail.com> - 5.7.1-1
+- Update to 5.7.1.
+
 * Thu Dec 06 2018 Simone Caronni <negativo17@gmail.com> - 5.6.1-1
 - Update to version 5.6.1.
 
