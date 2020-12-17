@@ -3,7 +3,7 @@
 
 Name:           rar
 Summary:        Program to create and manage RAR archives
-Version:        5.9.1
+Version:        6.0.0
 Release:        1%{?dist}
 License:        Proprietary
 URL:            http://www.rarlabs.com/
@@ -47,10 +47,14 @@ install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 %{_libdir}/default.sfx
 
 %changelog
+* Thu Dec 17 2020 Simone Caronni <negativo17@gmail.com> - 6.0.0-1
+- Update to 6.0.0.
+- Trim changelog.
+
 * Fri Jul 10 2020 Simone Caronni <negativo17@gmail.com> - 5.9.1-1
 - Update to 5.9.1.
 
-* Thu Mar 08 2020 Simone Caronni <negativo17@gmail.com> - 5.9.0-1
+* Tue Mar 08 2020 Simone Caronni <negativo17@gmail.com> - 5.9.0-1
 - Update to 5.9.0.
 
 * Sat Jan 11 2020 Simone Caronni <negativo17@gmail.com> - 5.8.0-1
@@ -58,48 +62,3 @@ install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 
 * Tue May 14 2019 Simone Caronni <negativo17@gmail.com> - 5.7.1-1
 - Update to 5.7.1.
-
-* Thu Dec 06 2018 Simone Caronni <negativo17@gmail.com> - 5.6.1-1
-- Update to version 5.6.1.
-
-* Wed Sep 26 2018 Simone Caronni <negativo17@gmail.com> - 5.6.0-1
-- Update to version 5.6.0.
-
-* Tue Sep 19 2017 Simone Caronni <negativo17@gmail.com> - 5.5.0-1
-- Update to 5.5.0.
-
-* Mon Feb 13 2017 Simone Caronni <negativo17@gmail.com> - 5.4.0-2
-- Remove RHEL/CentOS 5 support.
-
-* Wed Aug 17 2016 Simone Caronni <negativo17@gmail.com> - 5.4.0-1
-- Update to 5.4.0.
-
-* Mon Dec 21 2015 Simone Caronni <negativo17@gmail.com> - 5.3.0-1
-- Update to 5.3.0.
-- Add license macro.
-- Add unrar binary, obsolete unrar package in RPMFusion to enable 5.x archive
-  extraction.
-
-* Wed Apr 01 2015 Simone Caronni <negativo17@gmail.com> - 5.2.1-1
-- Update to 5.2.1.
-
-* Fri Dec 19 2014 Simone Caronni <negativo17@gmail.com> - 5.2.0-1
-- Update to 5.2.0 (5.20).
-
-* Fri Sep 05 2014 Simone Caronni <negativo17@gmail.com> - 5.1.1-1
-- Update to 5.1.1.
-
-* Mon Jul 07 2014 Simone Caronni <negativo17@gmail.com> - 5.1.0-1
-- Update to 5.1.0.
-
-* Sat Dec 14 2013 Simone Caronni <negativo17@gmail.com> - 5.0.1-1
-- Update to 5.0.1.
-
-* Fri Oct 04 2013 Simone Caronni <negativo17@gmail.com> - 5.0.0-1
-- Update to version 5.0.0.
-
-* Fri Aug 03 2012 Simone Caronni <negativo17@gmail.com> - 4.2.0-2
-- Small spec file changes.
-
-* Mon Jun 25 2012 Simone Caronni <negativo17@gmail.com> - 4.2.0-1
-- Updated.
