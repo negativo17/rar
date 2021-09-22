@@ -4,12 +4,12 @@
 Name:           rar
 Summary:        Program to create and manage RAR archives
 Version:        6.0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        Proprietary
-URL:            http://www.rarlabs.com/
+URL:            https://www.rarlab.com/
 
-Source0:        http://rarlab.com/rar/rarlinux-%{version}.tar.gz
-Source1:        http://rarlab.com/rar/rarlinux-x64-%{version}.tar.gz
+Source0:        https://rarlab.com/rar/rarlinux-%{version}.tar.gz
+Source1:        https://rarlab.com/rar/rarlinux-x64-%{version}.tar.gz
 ExclusiveArch:  %{ix86} x86_64
 
 Obsoletes:      unrar < %{?epoch}:%{version}-%{release}
@@ -47,6 +47,9 @@ install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 %{_libdir}/default.sfx
 
 %changelog
+* Wed Sep 22 2021 Simone Caronni <negativo17@gmail.com> - 6.0.2-2
+- Update URL and Source URLs.
+
 * Mon Aug 09 2021 Simone Caronni <negativo17@gmail.com> - 6.0.2-1
 - Update to 6.0.2.
 
