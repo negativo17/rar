@@ -3,14 +3,13 @@
 
 Name:           rar
 Summary:        Program to create and manage RAR archives
-Version:        6.0.2
-Release:        2%{?dist}
+Version:        6.10
+Release:        1%{?dist}
 License:        Proprietary
 URL:            https://www.rarlab.com/
 
-Source0:        https://rarlab.com/rar/rarlinux-%{version}.tar.gz
-Source1:        https://rarlab.com/rar/rarlinux-x64-%{version}.tar.gz
-ExclusiveArch:  %{ix86} x86_64
+Source0:        https://rarlab.com/rar/rarlinux-x64-610.tar.gz
+ExclusiveArch:  x86_64
 
 Obsoletes:      unrar < %{?epoch}:%{version}-%{release}
 Provides:       unrar = %{?epoch}:%{version}-%{release}
@@ -21,13 +20,7 @@ Console RAR supports archives only in RAR format, which names usually have a
 ".rar" extension. ZIP and other formats are not supported.
 
 %prep
-%ifarch %{ix86}
 %setup -q -n %{name}
-%endif
-
-%ifarch x86_64
-%setup -q -T -b 1 -n %{name}
-%endif
 
 %build
 # Nothing to build
@@ -47,6 +40,10 @@ install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 %{_libdir}/default.sfx
 
 %changelog
+* Fri Feb 04 2022 Simone Caronni <negativo17@gmail.com> - 6.10-1
+- Update to 6.10.
+- Drop 32 bit support.
+
 * Wed Sep 22 2021 Simone Caronni <negativo17@gmail.com> - 6.0.2-2
 - Update URL and Source URLs.
 
