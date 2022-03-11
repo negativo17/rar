@@ -3,13 +3,13 @@
 
 Name:           rar
 Summary:        Program to create and manage RAR archives
-Version:        6.10
+Version:        6.11
 Release:        1%{?dist}
 License:        Proprietary
 URL:            https://www.rarlab.com/
-
-Source0:        https://rarlab.com/rar/rarlinux-x64-610.tar.gz
 ExclusiveArch:  x86_64
+
+Source0:        https://rarlab.com/rar/rarlinux-x64-%(echo %version | tr -d '.').tar.gz
 
 Obsoletes:      unrar < %{?epoch}:%{version}-%{release}
 Provides:       unrar = %{?epoch}:%{version}-%{release}
@@ -40,6 +40,9 @@ install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 %{_libdir}/default.sfx
 
 %changelog
+* Fri Mar 11 2022 Simone Caronni <negativo17@gmail.com> - 6.11-1
+- Update to 6.11.
+
 * Fri Feb 04 2022 Simone Caronni <negativo17@gmail.com> - 6.10-1
 - Update to 6.10.
 - Drop 32 bit support.
