@@ -3,7 +3,7 @@
 
 Name:           rar
 Summary:        Program to create and manage RAR archives
-Version:        6.12
+Version:        6.20
 Release:        1%{?dist}
 License:        Proprietary
 URL:            https://www.rarlab.com/
@@ -40,6 +40,9 @@ install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 %{_libdir}/default.sfx
 
 %changelog
+* Sat Feb 04 2023 Simone Caronni <negativo17@gmail.com> - 6.20-1
+- Update to 6.20.
+
 * Thu Jun 02 2022 Simone Caronni <negativo17@gmail.com> - 6.12-1
 - Update to 6.12.
 
