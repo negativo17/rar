@@ -3,7 +3,7 @@
 
 Name:           rar
 Summary:        Program to create and manage RAR archives
-Version:        6.24
+Version:        7.0.0
 Release:        1%{?dist}
 License:        Proprietary
 URL:            https://www.rarlab.com/
@@ -20,10 +20,7 @@ Console RAR supports archives only in RAR format, which names usually have a
 ".rar" extension. ZIP and other formats are not supported.
 
 %prep
-%setup -q -n %{name}
-
-%build
-# Nothing to build
+%autosetup -n %{name}
 
 %install
 install -D -p -m0755 rar %{buildroot}%{_bindir}/rar
@@ -40,6 +37,10 @@ install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 %{_libdir}/default.sfx
 
 %changelog
+* Tue Mar 19 2024 Simone Caronni <negativo17@gmail.com> - 7.0.0-1
+- Update to 7.0.0.
+- Trim changelog.
+
 * Thu Feb 08 2024 Simone Caronni <negativo17@gmail.com> - 6.24-1
 - Update to 6.24.
 
@@ -64,25 +65,3 @@ install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 * Fri Feb 04 2022 Simone Caronni <negativo17@gmail.com> - 6.10-1
 - Update to 6.10.
 - Drop 32 bit support.
-
-* Wed Sep 22 2021 Simone Caronni <negativo17@gmail.com> - 6.0.2-2
-- Update URL and Source URLs.
-
-* Mon Aug 09 2021 Simone Caronni <negativo17@gmail.com> - 6.0.2-1
-- Update to 6.0.2.
-
-* Thu Dec 17 2020 Simone Caronni <negativo17@gmail.com> - 6.0.0-1
-- Update to 6.0.0.
-- Trim changelog.
-
-* Fri Jul 10 2020 Simone Caronni <negativo17@gmail.com> - 5.9.1-1
-- Update to 5.9.1.
-
-* Sun Mar 08 2020 Simone Caronni <negativo17@gmail.com> - 5.9.0-1
-- Update to 5.9.0.
-
-* Sat Jan 11 2020 Simone Caronni <negativo17@gmail.com> - 5.8.0-1
-- Update to 5.8.0.
-
-* Tue May 14 2019 Simone Caronni <negativo17@gmail.com> - 5.7.1-1
-- Update to 5.7.1.
