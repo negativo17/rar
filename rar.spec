@@ -3,16 +3,17 @@
 
 Name:           rar
 Summary:        Program to create and manage RAR archives
+Epoch:          1
 Version:        7.12
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        Proprietary
 URL:            https://www.rarlab.com/
 ExclusiveArch:  x86_64
 
 Source0:        https://rarlab.com/rar/rarlinux-x64-%(echo %version | tr -d '.').tar.gz
 
-Obsoletes:      unrar < %{?epoch}:%{version}-%{release}
-Provides:       unrar = %{?epoch}:%{version}-%{release}
+Obsoletes:      unrar < %{?epoch:%{epoch}:}%{version}-%{release}
+Provides:       unrar = %{?epoch:%{epoch}:}%{version}-%{release}
 
 %description
 RAR is a powerful tool allowing you to manage and control archive files.
@@ -37,6 +38,9 @@ install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 %{_libdir}/default.sfx
 
 %changelog
+* Thu Sep 18 2025 Simone Caronni <negativo17@gmail.com> - 1:7.12-2
+- Set Epoch so it properly obsoletes unrar which has a higher version.
+
 * Mon Jun 30 2025 Simone Caronni <negativo17@gmail.com> - 7.12-1
 - Update to 7.12.
 
