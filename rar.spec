@@ -4,7 +4,7 @@
 Name:           rar
 Summary:        Program to create and manage RAR archives
 Epoch:          1
-Version:        7.22
+Version:        7.23
 Release:        1%{?dist}
 License:        Proprietary
 URL:            https://www.rarlab.com/
@@ -38,6 +38,9 @@ install -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 %{_libdir}/default.sfx
 
 %changelog
+* Tue Jul 07 2026 Simone Caronni <negativo17@gmail.com> - 1:7.23-1
+- Update to 7.23.
+
 * Tue May 05 2026 Simone Caronni <negativo17@gmail.com> - 1:7.22-1
 - Update to 7.22.
 
